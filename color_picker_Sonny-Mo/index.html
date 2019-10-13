@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Color Picker Sonny & Mô</title>
+    <link href="https://fonts.googleapis.com/css?family=Comic Sans MS+One" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.min.js" charset="utf-8"></script>
+  </head>
+  <body>
+
+<script>
+
+     $(document).ready(function(){
+       $(".r, .g, .b").on('input', function(){
+         var r = $(".r").val();
+         var g = $(".g").val();
+         var b = $(".b").val();
+
+        $(".show-color").css("background", "rgb("+r+","+g+","+b+")");
+        $(".rgb-val").val( "rgb("+r+","+g+","+b+")");
+       });
+
+
+     });
+
+
+
+</script>
+
+
+
+
+
+
+
+    <h1>Color Picker</h1>
+    <h2>Sonny & Mô</h2>
+
+      <div class="container">
+
+          <div class="rgb-slider">
+
+            <p>Rouge </p> <input type="range" max="255" min="0" step="1" class="r"><br>
+            <p>Vert </p> <input type="range" max="255" min="0" step="1" class="g"><br>
+            <p>Bleu </p> <input type="range" max="255" min="0" step="1" class="b"><br>
+
+
+          </div>
+
+          <div class="show-color"></div>
+
+          <div class="color-value">
+
+              <span>Valeur Couleur</span> <input type="text" class="rgb-val">
+
+
+          </div>
+
+      </div>
+
+  </body>
+</html>
